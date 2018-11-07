@@ -72,6 +72,7 @@ public class MainApplication extends Application implements ReactApplication {
    }
   ```
   **launch_screen.xml**
+  
   Create a file called **launch_screen.xml** in **app/src/main/res/layout** (create the **layout-folder** if it doesn't exist). The contents of the file should be the following
   ```
   <?xml version="1.0" encoding="utf-8"?>
@@ -82,6 +83,7 @@ public class MainApplication extends Application implements ReactApplication {
   </LinearLayout>
   ```
   **Splash Icons**
+  
   Customize your launch screen by creating a **launch_screen.png-file** and placing it in an appropriate **drawable-folder**.
   * drawable-ldpi
   * drawable-mdpi
@@ -91,6 +93,7 @@ public class MainApplication extends Application implements ReactApplication {
   * drawable-xxxhdpi
   
   **colors.xml**
+  
   Add a color called **primary_dark** in **app/src/main/res/values/colors.xml**
   ```
   <?xml version="1.0" encoding="utf-8"?>
@@ -99,6 +102,7 @@ public class MainApplication extends Application implements ReactApplication {
   </resources>
    ```
    **Optional Step**
+   
    Open **android/app/src/main/res/values/styles.xml** and add :
    ```
    <resources>
@@ -111,6 +115,7 @@ public class MainApplication extends Application implements ReactApplication {
    </resources>
    ```
    **colors.xml**
+   
    Create **android/app/src/main/res/values/colors.xml** and add
    ```
    <?xml version="1.0" encoding="utf-8"?>
@@ -119,6 +124,7 @@ public class MainApplication extends Application implements ReactApplication {
    </resources>
    ```
    **styles.xml**
+   
    Create a style definition for this in **android/app/src/main/res/values/styles.xml** :
    ```
    <?xml version="1.0" encoding="utf-8"?>
@@ -129,6 +135,7 @@ public class MainApplication extends Application implements ReactApplication {
    </resources>
    ```
    **MainActivity.java**
+   
    Change your **show** method in **MainActivity.java** to include your custom style: 
    ```
    SplashScreen.show(this, R.style.SplashScreenTheme);
