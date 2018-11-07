@@ -71,6 +71,7 @@ public class MainApplication extends Application implements ReactApplication {
        // ...other code
    }
   ```
+  **launch_screen.xml**
   Create a file called **launch_screen.xml** in **app/src/main/res/layout** (create the **layout-folder** if it doesn't exist). The contents of the file should be the following
   ```
   <?xml version="1.0" encoding="utf-8"?>
@@ -80,6 +81,7 @@ public class MainApplication extends Application implements ReactApplication {
       android:background="@drawable/launch_screen">
   </LinearLayout>
   ```
+  **Splash Icons**
   Customize your launch screen by creating a **launch_screen.png-file** and placing it in an appropriate **drawable-folder**.
   * drawable-ldpi
   * drawable-mdpi
@@ -88,6 +90,7 @@ public class MainApplication extends Application implements ReactApplication {
   * drawable-xxhdpi
   * drawable-xxxhdpi
   
+  **colors.xml**
   Add a color called **primary_dark** in **app/src/main/res/values/colors.xml**
   ```
   <?xml version="1.0" encoding="utf-8"?>
@@ -107,6 +110,7 @@ public class MainApplication extends Application implements ReactApplication {
        </style>
    </resources>
    ```
+   **colors.xml**
    Create **android/app/src/main/res/values/colors.xml** and add
    ```
    <?xml version="1.0" encoding="utf-8"?>
@@ -114,6 +118,7 @@ public class MainApplication extends Application implements ReactApplication {
        <color name="status_bar_color"><!-- Colour of your status bar here --></color>
    </resources>
    ```
+   **styles.xml**
    Create a style definition for this in **android/app/src/main/res/values/styles.xml** :
    ```
    <?xml version="1.0" encoding="utf-8"?>
@@ -123,6 +128,7 @@ public class MainApplication extends Application implements ReactApplication {
        </style>
    </resources>
    ```
+   **MainActivity.java**
    Change your **show** method in **MainActivity.java** to include your custom style: 
    ```
    SplashScreen.show(this, R.style.SplashScreenTheme);
@@ -140,6 +146,29 @@ public class MainApplication extends Application implements ReactApplication {
         }
     }
    ```
+   
+   **launch_screen.xml (Extra Styling)**
+   ```
+   <?xml version="1.0" encoding="utf-8"?>
+   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       android:orientation="vertical" 
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:gravity="center"
+       android:background="@color/white"
+   >
+       <ImageView android:id="@+id/image_view"     
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:adjustViewBounds="true"
+           android:visibility="visible"
+           android:src="@drawable/launch_screen"  
+           android:layout_marginRight="60dp"
+           android:layout_marginLeft="60dp"
+       /> 
+   </LinearLayout>
+   ```
+   
   
   
   
